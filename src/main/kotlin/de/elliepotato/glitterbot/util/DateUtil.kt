@@ -33,7 +33,6 @@ class DateUtil {
 
         var i = 0
         while (i < types.size) {
-            println(names[i])
             if (accuracy > 2)
                 break
 

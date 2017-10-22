@@ -11,7 +11,6 @@ import net.dv8tion.jda.core.entities.Game
 import net.dv8tion.jda.core.events.guild.member.GuildMemberJoinEvent
 import net.dv8tion.jda.core.hooks.ListenerAdapter
 import net.dv8tion.jda.core.managers.GuildController
-import net.dv8tion.jda.core.managers.GuildManager
 import java.util.logging.Level
 
 /**
@@ -43,7 +42,7 @@ class GlitterBot {
                 .addEventListener(object : ListenerAdapter() {
 
                     override fun onGuildMemberJoin(e: GuildMemberJoinEvent) {
-                        GuildController(e.guild).addRolesToMember(e.member, e.guild.getRoleById(334875750345867275L))
+                        GuildController(e.guild).addRolesToMember(e.member, e.guild.getRoleById(334875750345867275L)).queue()
                     }
 
                 })

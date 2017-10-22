@@ -36,7 +36,7 @@ class GlitterConfig {
             writer.close()
         }
 
-        val parser:JSONParser = JSONParser()
+        val parser = JSONParser()
         val reader = parser.parse(FileReader(file)) as JSONObject
         token = reader["token"] as String
         botPrefix = reader["botPrefix"] as String
